@@ -643,4 +643,193 @@ window.addEventListener('load', () => {
 
 
 
+    // Time page countdown function
+    function timeClock() {
+
+
+        const inputs = document.querySelectorAll('.clock-input-js');      // Access to the input
+        const star = document.querySelector('#star-btn');       //Get start button
+        let hourState = false;  //Determine whether hours exist
+        let minuteState = false;  //Determine if minutes exist
+        let flag = false;   //Check whether the timer opens the throttle valve    
+
+
+
+        // Check whether the write time is specified
+        function isTime(value01, value02) {
+            if (value01 > 0 || value02 > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // Determine if you have the time
+        function isTimeAll(value01, value02) {
+            if (value01 == true) {
+                return true;
+            } else if (value02 == true) {
+                return true;
+            } else {
+                return false
+            }
+        }
+
+        // Check whether the time input is valid
+        function isTimeNumber(inputs) {
+            // Legal for true
+            let isTimeInvalid = false;
+
+            if (inputs[0].value <= 100) {
+                isTimeInvalid = true;
+            } else {
+                return false;
+            }
+
+            if (inputs[1].value <= 9) {
+                isTimeInvalid = true;
+            } else {
+                return false;
+            }
+
+            if (inputs[2].value <= 6) {
+                isTimeInvalid = true;
+            } else {
+                return false;
+            }
+
+            if (inputs[3].value <= 9) {
+                isTimeInvalid = true;
+            } else {
+                return false;
+            }
+
+            if (isTimeInvalid) {
+                return true;
+            }
+
+        }
+
+        // Check whether the time is a 2-digit number
+        function isDouble(value) {
+            if (value.length == 2) {
+                return value
+            } else {
+                return `0${value}`;
+            }
+        }
+
+        // How many minutes to get the countdown
+        function duration(hour01, hour02, minute01, minute02, second01, second02) {
+            // hour
+            let hour = parseInt(hour01) * 10 + parseInt(hour02);
+            // minute
+            let minute = parseInt(minute01) * 10 + parseInt(minute02) + hour * 60;
+            // second
+            let second = parseInt(second01) * 10 + parseInt(second02) + minute * 60;
+
+            return second;
+        }
+
+
+
+        // Bind change events to each input box to prevent the input box from being empty
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('change', function () {
+                if (this.value == '') {
+                    this.value = 0;
+                }
+            })
+        }
+
+
+        // Start button click event
+        star.addEventListener('click', () => {
+
+            // Check whether the user enters hour or minute
+            hourState = isTime(inputs[0].value, inputs[1].value);
+            minuteState = isTime(inputs[2].value, inputs[3].value);
+            // Check whether the input is valid
+            let isTimeInvalid = isTimeNumber(inputs);
+            // Check whether all have input time
+            let TimeAll = isTimeAll(hourState, minuteState);
+            // time
+            let hour01 = parseInt(inputs[0].value),
+                hour02 = parseInt(inputs[1].value),
+                minute01 = parseInt(inputs[2].value),
+                minute02 = parseInt(inputs[3].value),
+                second01 = parseInt(inputs[4].value),
+                second02 = parseInt(inputs[5].value);
+
+            // time of duration
+            let durationTime = duration(hour01, hour02, minute01, minute02, second01, second02);
+
+
+
+
+
+            // If time is available, start the timer
+            if (TimeAll && isTimeInvalid) {
+
+                // Check whether the timer already exists
+                if (!flag) {
+                    let timer = setInterval(() => {
+                        // Duration reduction
+                        durationTime--;
+                        // Throttle true The timer is on
+                        flag = true;
+
+                        // Reciprocal computation time algorithm
+                        let hour = Math.floor(durationTime / (60 * 60));
+                        let minute = Math.floor(durationTime / 60) - (hour * 60);
+                        let second = Math.floor(durationTime) - (hour * 60 * 60) - (minute * 60);
+
+
+                        // Insert the time into the input box  The isDouble function is used to determine whether it is a two-digit number, and if not, to prefix it with 0
+                        inputs[0].value = isDouble(hour.toString()).slice(0, 1);
+                        inputs[1].value = isDouble(hour.toString()).slice(1, 2);
+                        inputs[2].value = isDouble(minute.toString()).slice(0, 1);
+                        inputs[3].value = isDouble(minute.toString()).slice(1, 2);
+                        inputs[4].value = isDouble(second.toString()).slice(0, 1);
+                        inputs[5].value = isDouble(second.toString()).slice(1, 2);
+
+
+                        // console.log(durationTime);
+                        // The end of the countdown clear timer
+                        if (durationTime == 0) {
+                            flag = false
+                            clearInterval(timer);
+                        }
+
+                    }, 1000);
+                }
+
+            } else {
+                alert('输入的时间不合法');
+                inputs[0].value = 0;
+                inputs[1].value = 0;
+                inputs[2].value = 0;
+                inputs[3].value = 0;
+                inputs[4].value = 0;
+                inputs[5].value = 0;
+            }
+
+
+        })
+    }
+    timeClock();
+
+
+
+
+
+
+
+
+    // -----------------------------------------------------
+
+
+
+ 
+
 })
