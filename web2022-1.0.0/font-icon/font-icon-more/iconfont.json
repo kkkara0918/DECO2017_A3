@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "145706",
+      "name": "更多_填充",
+      "font_class": "gengduotianchong",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    }
+  ]
+}

@@ -1,0 +1,1398 @@
+/* Clear all styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Disable page scrolling */
+body {
+    /* width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden; */
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* -------------------------------------------------- */
+
+
+
+/* top */
+.top {
+    width: 100%;
+    height: 100px;
+    background-color: #EEF4ED;
+    line-height: 100px;
+    padding-left: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.top-left-box-icon {
+    float: left;
+}
+
+.top .top-left-icon {
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.top-left-icon-clock {
+    color: aqua;
+    font-size: 40px !important;
+}
+
+.top-left-box-text {
+    float: left;
+}
+
+.top-left-box-text h5 {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.title-h5 {
+    user-select: none;
+}
+
+/* Select the style when selecting the top title bar */
+.title-h5-active {
+    background-color: #A9A9A9;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.top-right-box {
+    float: right;
+    margin-right: 40px;
+}
+
+.top-right-icon {
+    font-size: 50px;
+    color: aqua;
+}
+
+
+/* -------------------------------------- */
+
+
+/* clock */
+.clock-pop-up-box {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(239, 245, 238, 0.5);
+}
+
+.clock-pop-up-box-content {
+    width: 540px;
+    height: 480px;
+    background-color: white;
+    border-radius: 60px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 20px;
+}
+
+.clock-pop-up-box-content-close {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 460px;
+}
+
+.clock-pop-up-box-search {
+    width: 300px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-left: 120px;
+    margin-top: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding-left: 100px;
+}
+
+.clock-pop-up-box-content h3 {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.clock-pop-up-box-content-left,
+.clock-pop-up-box-content-right {
+    width: 274px;
+    height: 320px;
+    float: right;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clock-pop-up-box-content-right-content-box ul {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.clock-pop-up-box-content-right-content-box ul li {
+    width: 80px;
+    height: 30px;
+    /* background-color: #00f3fc; */
+    line-height: 30px;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.clock-pop-up-box-content-left {
+    width: 260px;
+    border-right: 4px dotted #ccc;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clock-pop-up-box-content h3 {
+    display: inline-block;
+}
+
+.clock-pop-up-box-content-add {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 15px;
+}
+
+.clock-pop-up-box-content-add01 {
+    background-color: #E4EEFC;
+    margin-bottom: 20px;
+}
+
+.clock-pop-up-box-content-add02 {
+    background-color: #FFE5AE;
+    border-radius: 50%;
+}
+
+.clock-pop-up-box-content-my-play-box {
+    width: 220px;
+    height: 50px;
+    background-color: #00f3fc;
+    border-radius: 50px;
+    line-height: 50px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.clock-pop-up-box-content-my-play-box h6 {
+    font-size: 18px;
+    float: left;
+    font-weight: 500;
+}
+
+.clock-pop-up-box-content-my-play-box .date {
+    font-size: 10px;
+    color: #000;
+    margin-top: 10px;
+    line-height: 70px;
+}
+
+.clock-between {
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.clock-learning {
+    width: 180px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 0 auto;
+    /* line-height: 50px; */
+    box-sizing: border-box;
+    /* padding: 6px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.clock-learning-dot {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background-color: #FFE5AE;
+    border-radius: 50%;
+}
+
+.clock-learning h2 {
+    display: inline-block;
+    font-weight: 500;
+    color: rgb(121, 121, 121);
+}
+
+.clock-user-click {
+    width: 830px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.clock-user-click span {
+    font-size: 80px;
+}
+
+.clock-user-click input {
+    width: 120px;
+    height: 200px;
+    color: white;
+    background-color: #536F5A;
+    font-size: 80px;
+    text-align: center;
+    border: 0;
+}
+
+.clock-input {
+    margin-right: 10px;
+}
+
+.clock-star {
+    width: 120px;
+    height: 55px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 55px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.clock-star:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.clock-learning:hover {
+    cursor: pointer;
+}
+
+.top-left-box-text h5:hover {
+    cursor: pointer;
+}
+
+.iconfont:hover {
+    cursor: pointer;
+}
+
+
+/* --------------------------------------- */
+
+
+/* Plan */
+/* Plan left */
+.plan-left,
+.tool-left {
+    width: 120px;
+    height: 100vh;
+    background-color: #EFF5EE;
+    border-right: 1px solid #ccc;
+    padding-top: 1px;
+    position: absolute;
+    z-index: 999;
+}
+
+.plan-left ul li,
+.tool-left ul li {
+    font-size: 20px;
+    width: 90px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+.plan-left ul li:hover,
+.tool-left ul li {
+    cursor: pointer;
+}
+
+/* Plan the style for the left column activity */
+.plan-left-ul-li-active,
+.tool-left-ul-li-active {
+    background-color: #A9A9A9;
+    color: white;
+}
+
+
+/*  plan right */
+.plan-right {
+    width: auto;
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 200px;
+}
+
+.plan-right-April h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.plan-right-li-box {
+    width: 250px;
+    height: 160px;
+    background-color: #D6D9C8;
+    border-radius: 20px;
+    float: left;
+    margin-top: 30px;
+    margin-right: 60px;
+    position: relative;
+}
+
+.plan-right-li-title {
+    width: 100%;
+    height: 70px;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.plan-right-li-title h4 {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.plan-right-li-title span {
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+
+}
+
+.plan-right-li-title:hover {
+    cursor: pointer;
+}
+
+.plan-right-li-more {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.plan-right-li-more span {
+    font-size: 25px;
+}
+
+.plan-right-li-more span:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.plan-right-May {
+    width: auto;
+    margin-top: 250px;
+}
+
+
+
+/* plan right add */
+.plan-right-add-left {
+    width: auto;
+    height: 100vh;
+    /* background-color: aqua; */
+    float: left;
+    margin-left: 2.6vw;
+}
+
+.plan-right-add-left-son {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.plan-right-add-right {
+    /* width: auto; */
+    height: 100vh;
+    /* background-color: aqua; */
+    float: right;
+    /* margin-left: 20vw; */
+}
+
+.plan-right-add-left-search {
+    width: 500px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px #7a7a7a;
+    box-sizing: border-box;
+    padding-left: 20px;
+
+}
+
+.plan-right-add-left-son-color {
+    width: 400px;
+    height: 400px;
+    /* background-color: aqua; */
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.plan-right-add-left-son-color ul li {
+    width: 50px;
+    height: 50px;
+    /* background-color: aqua; */
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* Color selection box */
+.plus-sign-color {
+    float: left;
+    font-size: 40px;
+    color: #818181;
+    width: 0px;
+    height: 0px;
+    border: 0;
+    background-color: white;
+    margin-top: 20px;
+}
+
+/* The style of the color palette when li is active */
+.plus-li-active {
+    width: 42px !important;
+    height: 42px !important;
+    border: 4px dashed #B3B3B3;
+}
+
+.plan-right-add-right {
+    width: 700px;
+    height: 100vh;
+    /* background-color: skyblue; */
+}
+
+.plan-right-add-right-due {
+    width: 350px;
+    height: 50px;
+    border-bottom: 1px solid #000;
+    line-height: 70px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.plan-right-add-right-due h4 {
+    float: left;
+    margin-left: 20px;
+}
+
+.plan-right-add-right-due input {
+    width: 50px;
+    margin-left: 170px;
+    border: 0;
+    font-size: 20px;
+}
+
+.plan-right-add-right-finish {
+    width: 500px;
+    padding: 0;
+    /* background-color: bisque; */
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.plan-right-add-right-finish h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.plan-right-add-right-finish-btn01 {
+    width: auto;
+    background-color: chocolate;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-left: 60px;
+}
+
+.plan-right-add-right-finish-btn01 ul li {
+    float: left;
+    width: 120px;
+    height: 30px;
+    font-size: 10px;
+    background-color: white;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+.plan-right-add-right-finish-btn01-week li {
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: 20px !important;
+    border-radius: 50% !important;
+    line-height: 40px !important;
+    font-size: 14px !important;
+}
+
+.plan-right-add-right-finish-btn01 ul li:hover {
+    cursor: pointer;
+}
+
+.plan-right-add-right-remind {
+    /* width: 500px; */
+    /* background-color: cyan; */
+    margin: 0 auto;
+    margin-top: 150px;
+    padding-left: 160px;
+    position: relative;
+}
+
+
+
+.plan-right-add-right-remind-btn {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.plan-right-add-right-remind-btn-input {
+    margin-right: 200px;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: -10px;
+    left: 300px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    resize: none;
+}
+
+
+/* Select the time button activity status */
+.plan-right-add-right-finish-btn01-li-active {
+    background-color: #99AEA5 !important;
+    color: white !important;
+    border: 1px solid #fff !important;
+}
+
+.plan-right-add-right-star {
+    margin-top: 40px !important;
+    margin: 0 auto;
+    padding-left: 160px;
+}
+
+.plan-right-add-right-star input {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.plan-right-add-right-star-goals {
+    margin-top: 40px !important;
+    margin: 0 auto;
+    padding-left: 160px;
+    /* background: chocolate; */
+    position: relative;
+}
+
+.plan-right-add-time {
+    width: 500px;
+    height: 50px;
+    /* background-color: aqua; */
+    margin-left: 150px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.plan-right-add-time span {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.plan-right-add-time input {
+    border-radius: 20px;
+    width: 100px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.add-btn-box {
+    width: 200px;
+    height: 200px;
+    /* background-color: aqua; */
+    margin-left: 150px;
+    padding-top: 25px;
+}
+
+.add-btn-box button {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid #ccc;
+    margin-left: 150px;
+}
+
+.plan-right-add-right-star-goals-switch {
+    position: absolute;
+    top: 0px;
+    left: 450px;
+}
+
+
+/* plan right  record */
+.plan-right-record {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    padding-top: 20px;
+}
+
+.plan-right-record-top {
+    width: auto;
+    height: 850px;
+    /* background-color: cornflowerblue; */
+    margin: 0 auto;
+    padding-left: 200px;
+}
+
+.plan-right-record-top .img-box {
+    width: 600px;
+    height: 600px;
+
+    background: url("../img/222.png") no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.plan-right-record-top-box01 {
+    margin-right: 50px;
+    /* margin-left: 100px; */
+    float: left;
+    position: absolute;
+}
+
+.plan-right-record-top .img-box h3 {
+    font-size: 22px;
+    position: absolute;
+    top: 30px;
+    left: 300px;
+}
+
+.plan-right-record-top-bottom-box01 {
+    width: 600px;
+    height: 800px;
+    /* background-color: aqua; */
+    margin-left: 100px;
+}
+
+.plan-right-record-top-bottom-box02 {
+    width: 600px;
+    height: 800px;
+    /* background-color: aqua; */
+    margin-left: 100px;
+    position: absolute;
+    top: 125px;
+    left: 900px;
+}
+
+.plan-right-record-bottom-tag-color {
+    width: 25px;
+    height: 25px;
+    background-color: aqua;
+    float: left;
+}
+
+.plan-right-record-bottom-tag {
+    margin-top: 40px;
+    float: left;
+}
+
+.plan-right-record-bottom-tag ul li {
+    display: inline-block;
+    width: 250px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+    /* background-color: azure; */
+}
+
+.plan-right-record-bottom-tag ul li span {
+    display: inline-block;
+    /* width: 70px; */
+    height: 21px;
+    margin-left: 40px;
+}
+
+.plan-right-record-top-box01-move,
+.plan-right-record-top-box02-move {
+    position: absolute;
+    left: 200px;
+    top: 55px;
+}
+
+.move {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.move01 {
+
+    background-color: #B6BDCD;
+
+    /* One time point every 40 pixels */
+    transform: translateY(20px);
+}
+
+.move02 {
+
+    background-color: #00f3fc;
+
+    /* One time point every 40 pixels */
+    transform: translateY(80px) translateX(40px);
+}
+
+
+/* ------------------------- */
+
+
+/* instrument  */
+.tool-music {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+}
+
+.tool-music-box {
+    width: 700px;
+    height: 700px;
+    /* background-color: white; */
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+.tool-music-box input {
+    width: 320px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px #7a7a7a;
+    font-size: 20px;
+    background: url("../img/ziyuanldpi.png") no-repeat;
+    background-size: 20px;
+    background-position: 10px;
+    padding-left: 40px;
+}
+
+/* input Delete photos when focusing */
+.tool-music-box input:focus {
+    background: none;
+}
+
+.tool-music-box-title {
+    width: 620px;
+    height: 40px;
+    /* background-color: aqua; */
+    margin: 0 auto;
+    margin-top: 40px;
+    border-bottom: 1px solid #000;
+}
+
+.tool-music-box-title ul li {
+    float: left;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tool-music-box-title-ul-li-active {
+    background-color: #596E5C;
+    color: white;
+}
+
+.tool-music-box-music {
+    width: 300px;
+    height: 300px;
+    background-color: #FDE0D5;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 50%;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-music-box-music-s {
+    width: 270px;
+    height: 270px;
+    background-color: #FDE0D5;
+    border: 5px solid #D1C3BE;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-black-box {
+    background-color: black;
+    border: 1px solid #797979;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-music-box-music-s-s {
+    width: 250px;
+    height: 250px;
+}
+
+.tool-music-box-music-s-s-s {
+    width: 230px;
+    height: 220px;
+}
+
+.tool-music-box-music-s-s-s-s {
+    width: 210px;
+    height: 210px;
+}
+
+.tool-music-box-music-s-s-s-s-s {
+    width: 190px;
+    height: 190px;
+}
+
+.tool-music-box-music-s-s-s-s-son {
+    width: 170px;
+    height: 170px;
+    background-color: #FDE0D5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-music-box-music-s-s-s-s-son span {
+    font-size: 80px;
+}
+
+.tool-music-tools {
+    width: 500px;
+    height: 60px;
+    /* background-color: aqua; */
+    margin: 0 auto;
+    margin-top: 50px;
+    line-height: 60px;
+    padding-left: 60px;
+}
+
+.tool-music-tools span {
+    font-size: 30px;
+    margin-right: 50px;
+}
+
+.icon-xiai {
+    color: red;
+}
+
+.tool-music-bar {
+    width: 100vw;
+    height: 150px;
+    background-color: #8E9894;
+    position: absolute;
+    left: 00px;
+    bottom: 0;
+    z-index: 0;
+}
+
+.tool-music-bar input {
+    width: 88vw;
+    padding: 0;
+    margin-left: -180px;
+    color: #A5CBF1;
+    background: none;
+}
+
+.tool-music-bar-title {
+    width: 300px;
+    height: 100px;
+    /* background-color: aqua; */
+    text-align: center;
+    margin-left: 160px;
+    margin-top: 0px;
+    /* position: relative; */
+    float: left;
+}
+
+.tool-music-bar-title h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.tool-music-bar-title span {
+    color: white;
+    font-size: 20px;
+}
+
+.tool-music-bar-btn {
+    /* display: inline; */
+    width: 400px;
+    height: 100px;
+    /* background-color: aqua; */
+    /* float: left; */
+    /* float: right; */
+    text-align: left;
+    line-height: 100px;
+    margin: 0 auto;
+    /* margin-left: 10px; */
+}
+
+.tool-music-bar-btn span {
+    font-size: 35px;
+    margin-left: 40px;
+}
+
+.tool-music-list {
+    width: 1500px;
+    height: 500px;
+    /* background-color: black; */
+    margin: 0 auto;
+    margin-left: -350px;
+}
+
+.tool-music-list ul li {
+    float: left;
+    margin-left: 120px;
+    margin-top: 60px;
+}
+
+.tool-music-list ul li div {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 40px;
+    position: relative;
+}
+
+.tool-music-list ul li div h5 {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+
+
+/* ------------------------------------------ */
+
+
+
+/* tool  dictionary page*/
+.tool-dictionary-top {
+    width: 100vw;
+    height: 120px;
+    /* background-color: aqua; */
+}
+
+.tool-dictionary-top input {
+    width: 400px;
+    height: 40px;
+    border: 0;
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 100px;
+    box-shadow: 0px 2px 6px #7a7a7a;
+    background: url("../img/sousuo.png") no-repeat 10px 6px,
+        url("../img/quxiao.png") no-repeat 360px 6px;
+    background-size: 30px;
+    /* background-position-y: 7px; */
+    line-height: 40px;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
+    float: left;
+}
+
+.tool-dictionary-top ul {
+    float: left;
+    position: absolute;
+    left: 700px;
+}
+
+.tool-dictionary-top ul li {
+    margin-top: 60px;
+    float: left;
+    margin-left: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 8px;
+}
+
+.tool-dictionary-top-ul-li-active {
+    background-color: #596E5C;
+    color: white;
+}
+
+.tool-dictionary-default-Daily {
+    width: 100vw;
+    height: 250px;
+    margin-left: 200px;
+    margin-top: 20px;
+    /* background-color: aqua; */
+}
+
+.tool-dictionary-default-Daily h3 {
+    display: inline;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.tool-dictionary-default-Daily h3:nth-of-type(2) {
+    display: block;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.tool-dictionary-default-Daily .tool-dictionary-line {
+    border: 1px solid #ccc;
+    width: 100vw;
+    margin-left: 200px;
+    margin-top: -14px;
+}
+
+.tool-dictionary-default-Daily h2 {
+    margin-top: 30px;
+    margin-left: 40px;
+    font-weight: 400;
+    color: #5891CD;
+}
+
+.tool-dictionary-default-Daily h2 span {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.tool-dictionary-default-Daily .tool-dictionary-default-box-btn {
+    width: 300px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 40px;
+    /* background-color: aqua; */
+}
+
+.tool-dictionary-default-Daily .tool-dictionary-default-box-btn div {
+    width: 120px;
+    height: 40px;
+    border: 1px solid #000;
+    float: left;
+    margin-right: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+}
+
+.tool-dictionary-default-Daily .tool-dictionary-default-box-btn .tool-dictionary-icon {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tool-dictionary-default-study {
+    width: 100vw;
+    height: 150px;
+    margin-left: 200px;
+}
+
+.tool-dictionary-default-study h3 {
+    display: inline;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.tool-dictionary-default-study .tool-dictionary-line {
+    border: 1px solid #ccc;
+    width: 100vw;
+    margin-left: 200px;
+    margin-top: -14px;
+}
+
+.tool-dictionary-default-study .tool-dictionary-default-box-btn {
+    width: 700px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.tool-dictionary-default-study .tool-dictionary-default-box-btn div {
+    width: auto;
+    padding: 0px 10px;
+    height: 40px;
+    border: 1px solid #000;
+    float: left;
+    margin-right: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+}
+
+.tool-dictionary-default-study .tool-dictionary-default-button-word {
+    font-size: 12px;
+}
+
+.tool-dictionary-default-note {
+    width: 100vw;
+    height: 150px;
+    margin-left: 250px;
+}
+
+.tool-dictionary-default-note h3 {
+    display: inline;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.tool-dictionary-default-note .tool-dictionary-line {
+    border: 1px solid #ccc;
+    width: 100vw;
+    margin-left: 155px;
+    margin-top: -14px;
+}
+
+.tool-dictionary-default-note .tool-dictionary-default-box-btn div {
+    width: auto;
+    margin-top: 40px;
+    padding: 0px 10px;
+    height: 40px;
+    border: 1px solid #000;
+    float: left;
+    margin-right: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+}
+
+.tool-dictionary-default-note .tool-dictionary-default-button-word {
+    font-size: 12px;
+}
+
+
+.tool-dictionary-Dictionary-page {
+    margin-left: 200px;
+}
+
+.tool-dictionary-Dictionary-page h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.tool-dictionary-Dictionary-page .facilitator-word {
+    width: 300px;
+    height: 50px;
+    /* background-color: aqua; */
+    text-align: center;
+    line-height: 50px;
+}
+
+.tool-dictionary-Dictionary-page .facilitator-word h6 {
+    font-size: 16px;
+    font-weight: 500;
+    float: left;
+    margin-right: 20px;
+}
+
+.tool-dictionary-Dictionary-page .facilitator-word ul li {
+    float: left;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* The state of the little star when it's active */
+.icon-xingxing-active {
+    color: #F5BE5C;
+}
+
+.tool-dictionary-Dictionary-page .facilitator-word-sing {
+    width: 400px;
+    height: 40px;
+    /* background-color: aqua; */
+    line-height: 40px;
+}
+
+.tool-dictionary-Dictionary-page .facilitator-word-sing i {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.tool-dictionary-Dictionary-page .facilitator-word-sing span {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.tool-dictionary-Dictionary-page .Synonym {
+    margin-top: 40px;
+    width: 100vw;
+    height: 140px;
+    /* background-color: aqua; */
+    position: relative;
+}
+
+.tool-dictionary-Dictionary-page .Synonym h3 {
+    margin-bottom: 20px;
+}
+
+.tool-dictionary-Dictionary-page .line {
+    position: absolute;
+    width: 100vw;
+    border: 1px solid #ccc;
+    top: 18px;
+    left: 150px;
+}
+
+.tool-dictionary-Dictionary-page .Synonym .bottomSpan {
+    display: block;
+    margin-top: 10px;
+}
+
+.tool-dictionary-Dictionary-page .Example {
+    position: relative;
+}
+
+.tool-dictionary-Dictionary-page .Example .Example-article {
+    margin-top: 40px;
+    width: 700px;
+    height: 100px;
+    /* background-color: aqua; */
+}
+
+.Example-article-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.tool-dictionary-Dictionary-page .General-reference {
+    position: relative;
+}
+
+.tool-dictionary-Dictionary-page .General-reference .line {
+    left: 260px;
+}
+
+.tool-dictionary-Dictionary-page .General-reference .General-reference-article {
+    margin-top: 20px;
+    width: 800px;
+    height: 100px;
+}
+
+.Notes {
+    margin-top: 40px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.highlight-text {
+    color: #5F96CF;
+    cursor: pointer;
+}
+
+
+/* Control the hidden */
+.is-display {
+    display: none;
+}
+
+span {
+    /* The user cannot select span text */
+    /* When you think of span as a button */
+    user-select: none;
+}
+
+
+/* color */
+.color01 {
+    background-color: #CCE3DE;
+}
+
+.color02 {
+    background-color: #B5A6F8;
+}
+
+.color03 {
+    background-color: #FDE0D5;
+}
+
+.color04 {
+    background-color: #CDEBF4;
+}
+
+.color05 {
+    background-color: #FCE3AE;
+}
+
+.color06 {
+    background-color: #B6BDCD;
+}

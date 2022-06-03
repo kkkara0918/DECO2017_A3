@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14418909",
+      "name": "pause-circle",
+      "font_class": "pause-circle",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    }
+  ]
+}
