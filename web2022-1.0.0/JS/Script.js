@@ -830,6 +830,228 @@ window.addEventListener('load', () => {
 
 
 
- 
+ // Tool page  
+ function toolPage() {
+
+    // Tool page dictionary and music switch
+    function toolPageFunction() {
+        const toolLeftBtn = document.querySelector('.tool-left').children[0].children;      // Tool page dictionary and music switch
+        const toolPage = document.querySelectorAll('.tool-page');
+
+
+        // Traverse the left block button
+        for (let i = 0; i < toolLeftBtn.length; i++) {
+            // 给Bind click events to the left block buttons in sequence
+            toolLeftBtn[i].addEventListener('click', function () {
+
+                // Exclusive ideas
+                for (let i = 0; i < toolLeftBtn.length; i++) {
+                    toolLeftBtn[i].className = '';
+                    toolPage[i].style.display = 'none';
+                }
+
+                // Add the class name to the left block
+                this.className = 'tool-left-ul-li-active';
+                toolPage[i].style.display = 'block';
+            })
+        }
+    }
+    toolPageFunction();
+
+
+    // Music page title button music subpage refresh
+    function musicTitleBtnFunction() {
+        const toolTitleBtn = document.querySelector('.tool-music-box-title').children[0].children;  //Gets the title button of the music interface
+        const toolMusicPage = document.querySelectorAll('.tool-music-page')     //Gets the interface under the Music interface
+
+
+        // Iterate over the title button to add a bind click event to the button
+        for (let i = 0; i < toolTitleBtn.length; i++) {
+
+            toolTitleBtn[i].addEventListener('click', function () {
+
+                // Exclusive ideas
+                for (let i = 0; i < toolTitleBtn.length; i++) {
+                    toolTitleBtn[i].className = '';
+                    toolMusicPage[i].style.display = 'none';
+                }
+
+
+                toolMusicPage[i].style.display = 'block';
+                this.className = 'tool-music-box-title-ul-li-active';
+            })
+
+        }
+    }
+    musicTitleBtnFunction();
+
+
+    // Music player program
+    function musicPlayerProgram() {
+        const musicAudio = document.querySelector('#musicAudio');   //music player
+        const playBtn = document.querySelector('#playButton');      //Play button
+        const progress = document.querySelector('#progress');       //progress bar
+        const progressTime = document.querySelector('#progressTime');//Ongoing time
+        const finalTime = document.querySelector('#finalTime');     //Total audio duration
+
+        // Set the playback time through the progress bar
+        function setProgressControlTime() {
+            // Listen for progress bar changes
+            progress.addEventListener('change', function () {
+                // Video playback time = the progress bar times the total length of the video divided by 100
+                musicAudio.currentTime = (progress.value * musicAudio.duration) / 100;
+            })
+        }
+        setProgressControlTime();
+
+
+        // Set the time and progress bar values
+        function setProgressTimeATime() {
+
+            // Detect music player transformation
+            musicAudio.addEventListener('timeupdate', function () {
+
+                // Calculate the length of the progress bar
+                // video.currentTime Return media playback time in seconds
+                // video.duration   Returns the total length of the media in seconds
+                progress.value = (musicAudio.currentTime / musicAudio.duration) * 100;
+
+
+
+                // Gets the playing time
+                function getProgressTime() {
+                    // Math.floor()round down
+                    // getMinutes
+                    let mins = Math.floor(musicAudio.currentTime / 60);
+                    //Get number of seconds
+                    let secs = Math.floor(musicAudio.currentTime % 60);
+                    //If the second speed is less than 10, add 0
+                    // For example, 1 => 01
+                    if (mins < 10) {
+                        mins = `0${mins} `;
+                    }
+
+                    if (secs < 10) {
+                        secs = `0${secs} `;
+                    }
+
+                    // The playing time
+                    progressTime.innerHTML = `${mins}:${secs} `;
+
+                }
+                getProgressTime();
+
+
+
+
+                // Gets the total playing time
+                function getFinalTime() {
+                    // Get minutes
+                    let FMins = Math.floor(musicAudio.duration / 60);
+                    //Get number of seconds
+                    let FSecs = Math.floor(musicAudio.duration % 60);
+                    if (FMins < 10) {
+                        FMins = `0${FMins}`;
+                    }
+                    if (FSecs < 10) {
+                        FSecs = `0${FSecs}`;
+                    }
+                    // Total playing time
+                    finalTime.innerHTML = `${FMins}:${FSecs} `;
+                }
+                getFinalTime();
+
+
+            })
+
+        }
+        setProgressTimeATime();
+
+
+        // Play/pause the video
+        function musicPlay() {
+
+
+            // Play button click events
+            playBtn.addEventListener('click', function () {
+                // video.paused Whether to pause the video true Pausing the video False Playing the video
+                if (musicAudio.paused) {
+                    // play video
+                    musicAudio.play();
+                } else {
+                    // Stop video
+                    musicAudio.pause();
+                }
+            })
+
+            // Replace the pause icon or play icon
+            function updatePlayIcon() {
+                // video.paused Whether to pause the video true Pausing the video False Playing the video
+                if (musicAudio.paused) {
+                    playBtn.className = 'iconfont icon-playcircle';
+                } else {
+                    playBtn.className = 'iconfont icon-pause-circle';
+                }
+            }
+
+            // Audio Playback calls update play and pause video ICONS
+            musicAudio.addEventListener('pause', updatePlayIcon);
+            // Audio Playback calls update play and pause video ICONS
+            musicAudio.addEventListener('play', updatePlayIcon);
+        }
+        musicPlay();
+    }
+    musicPlayerProgram();
+
+    //Dictionary page top button
+    function dictionaryTopButton() {
+        const dictionaryTopBtn = document.querySelector('.tool-dictionary-top').children[1].children;   //Gets the dictionary top button
+        const dictionaryOnPage = document.querySelectorAll('.tool-dictionary-on-page'); //Gets a child page under the dictionary page
+        const dictionaryDefaultPage = document.querySelector('.tool-dictionary-default-page');
+        let flag = [];   //Controls whether the click is clicked True not clicked false
+
+
+        // The traversal button binds click events to each date button
+        for (let i = 0; i < dictionaryTopBtn.length; i++) {
+            flag[i] = false;
+
+            // Bind click events to buttons
+            dictionaryTopBtn[i].addEventListener('click', function () {
+                let temp = flag[i];  //Temporary variables are used to store flag values
+
+                // Exclusive ideas
+                for (let j = 0; j < dictionaryTopBtn.length; j++) {
+                    // Remove the class name for the button
+                    dictionaryTopBtn[j].className = '';
+                    // Give dictionary page face page hide
+                    dictionaryOnPage[j].style.display = 'none';
+                    flag[j] = false;
+                }
+
+                if (!temp) {
+                    // Never clicked
+                    this.className = 'tool-dictionary-top-ul-li-active';
+                    // Page display of the current button of the dictionary child
+                    dictionaryOnPage[i].style.display = 'block';
+                    // Hide the dictionary default page
+                    dictionaryDefaultPage.style.display = 'none';
+                    flag[i] = true;
+                } else {
+                    // It's already clicked
+                    this.className = '';
+                    // Dictionary default page display
+                    dictionaryDefaultPage.style.display = 'block';
+                    flag[i] = false;
+                }
+
+            })
+        }
+
+    }
+    dictionaryTopButton();
+
+}
+    toolPage();
+
 
 })
